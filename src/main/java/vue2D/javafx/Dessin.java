@@ -10,36 +10,42 @@ import labyrinthe.ISalle;
 import vue2D.sprites.ISprite;
 
 /**
-*
-* @author INFO Professors team
-*/
-
+ *
+ * @author INFO Professors team
+ */
 public class Dessin extends Canvas {
-    
+
     private Collection<ISprite> sprites;
     private ILabyrinthe labyrinthe;
     private int unite = 15;
     private GraphicsContext tampon;
     private Image solImage;
-   
-    public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites)
-    {
+    private Image salleImage;
+
+    public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.sprites = sprites;
         this.labyrinthe = labyrinthe;
-        setWidth(labyrinthe.getLargeur()*unite);
-        setHeight(labyrinthe.getHauteur()*unite);
+        setWidth(labyrinthe.getLargeur() * unite);
+        setHeight(labyrinthe.getHauteur() * unite);
         tampon = this.getGraphicsContext2D();
         chargementImages();
-        dessinFond(); 
-    }
-    
-     public void chargementImages(){
-    	solImage = new Image("file:icons/pyramide.jpg");
-    }
-    
-    public void dessinFond(){
-        tampon.drawImage(solImage,0,0,unite*labyrinthe.getLargeur(),
-                unite*labyrinthe.getHauteur());
+        dessinFond();
+        dessinSalles();
     }
 
+    public void chargementImages() {
+        solImage = new Image("file:icons/pyramide.jpg");
+        salleImage = new Image("file:icons/ground.gif");
+    }
+
+    public void dessinFond() {
+        tampon.drawImage(solImage, 0, 0, unite * labyrinthe.getLargeur(),
+                unite * labyrinthe.getHauteur());
+    }
+
+    public void dessinSalles() {
+        for (ISalle s : labyrinthe) {
+            tampon.drawImage(salleImage, s.getX()*unite, s.getY()*unite, unite, unite);
+        }
+    }
 }
