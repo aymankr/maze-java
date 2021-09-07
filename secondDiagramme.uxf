@@ -1,0 +1,194 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;1190&lt;/x&gt;&lt;y&gt;752&lt;/y&gt;&lt;w&gt;220&lt;/w&gt;&lt;h&gt;110&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;outils::Fichier
+--
+~sc = null: Scanner
+--
++Fichier(String nomFichier): ctor
++lireNombre(): int
+--
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;160&lt;/x&gt;&lt;y&gt;278&lt;/y&gt;&lt;w&gt;270&lt;/w&gt;&lt;h&gt;110&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;
+vue2D.sprites::ISprite
+--
+--
++dessiner(GraphicsContext g): void
++setCoordonnees(int xpix, int ypix): void
+--
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLPackage&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;140&lt;/x&gt;&lt;y&gt;208&lt;/y&gt;&lt;w&gt;320&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;package.vue2D.sprites
+--
+bg=pink
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;890&lt;/x&gt;&lt;y&gt;238&lt;/y&gt;&lt;w&gt;120&lt;/w&gt;&lt;h&gt;90&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;
+vue2D::IVue
+--
+--
++dessiner(): void
+--
+bg=pink
+
+
+
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;100&lt;/x&gt;&lt;y&gt;440&lt;/y&gt;&lt;w&gt;380&lt;/w&gt;&lt;h&gt;120&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;
+personnages::IPersonnage
+--
+--
++faitSonChoix(Collection&amp;lt;ISalle&amp;gt; sallesAccessibles): ISalle
++getPosition(): ISalle
++setPosition(ISalle s): void
+--
+bg=red&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;610&lt;/x&gt;&lt;y&gt;320&lt;/y&gt;&lt;w&gt;230&lt;/w&gt;&lt;h&gt;170&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;application::Core
+--
+~heros: ISprite
+~labyrinthe: ILabyrinthe
+--
+#initLabyrinthe(): void
+#initSprites(IVue vue): void
+#jeu(IVue vue): void
+-chargementLaby(String fic): void
+#temporisation(int nb): void
+--
+bg=black
+
+
+
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>Relation</id><coordinates><x>383</x><y>550</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>353</x><y>610</y><w>100</w><h>70</h></coordinates><panel_attributes>1..n</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>393</x><y>610</y><w>100</w><h>70</h></coordinates><panel_attributes>sallesAccessibles
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>403</x><y>130</y><w>260</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>240;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>463</x><y>730</y><w>260</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>240;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>423</x><y>540</y><w>320</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>300;80;300;10;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>683</x><y>600</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>263</x><y>210</y><w>30</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;220;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>383</x><y>220</y><w>200</w><h>160</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;140;180;140</additional_attributes></element><element><id>Relation</id><coordinates><x>783</x><y>430</y><w>130</w><h>210</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>110;190;110;10;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>373</x><y>260</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>903</x><y>600</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>693</x><y>170</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Text</id><coordinates><x>623</x><y>190</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>423</x><y>450</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>Text</id><coordinates><x>443</x><y>460</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>153</x><y>580</y><w>990</w><h>480</h></coordinates><panel_attributes>package.labyrinthe
+--
+bg=orange
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>533</x><y>280</y><w>690</w><h>220</h></coordinates><panel_attributes>package.application
+--
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>33</x><y>380</y><w>410</w><h>190</h></coordinates><panel_attributes>package.personnages
+--
+bg=gray</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>83</x><y>0</y><w>1380</w><h>260</h></coordinates><panel_attributes>package.vue2D
+--
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>903</x><y>520</y><w>100</w><h>70</h></coordinates><panel_attributes>labyrinthe
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>453</x><y>440</y><w>100</w><h>70</h></coordinates><panel_attributes>personnage
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>303</x><y>842</y><w>370</w><h>200</h></coordinates><panel_attributes>labyrinthe::Labyrinthe
+--
+#entree: ISalle
+#sortie: ISalle
+-largeur: int
+-hauteur: int
+--
++creerLabyrinthe(String file): void
++sallesAccessibles(IPersonnage bob): Collection&lt;ISalle&gt;
++getEntree(): ISalle
++getSortie(): ISalle
++chemin(ISalle u, ISalle v): Collection&lt;ISalle&gt;
++getLargeur(): int
++getHauteur(): int
+--
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>703</x><y>622</y><w>380</w><h>190</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+labyrinthe::ILabyrinthe
+--
+--
++creerLabyrinthe(String file): void
++sallesAccessibles(IPersonnage heros): Collection&lt;ISalle&gt;
++getEntree(): ISalle
++getSortie(): ISalle
++chemin(ISalle u, ISalle v): Collection&lt;ISalle&gt;
++getLargeur(): int
++getHauteur(): int
+--
+bg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>223</x><y>662</y><w>250</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+labyrinthe::ISalle
+--
+--
++getX(): int
++getY(): int
++estAdjacente(ISalle autre): boolean
+--
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>563</x><y>322</y><w>230</w><h>170</h></coordinates><panel_attributes>application::Core
+--
+~heros: ISprite
+~labyrinthe: ILabyrinthe
+--
+#initLabyrinthe(): void
+#initSprites(IVue vue): void
+#jeu(IVue vue): void
+-chargementLaby(String fic): void
+#temporisation(int nb): void
+--
+bg=black
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>53</x><y>432</y><w>380</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+personnages::IPersonnage
+--
+--
++faitSonChoix(Collection&lt;ISalle&gt; sallesAccessibles): ISalle
++getPosition(): ISalle
++setPosition(ISalle s): void
+--
+bg=yellow
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>643</x><y>92</y><w>120</w><h>90</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+vue2D::IVue
+--
+--
++dessiner(): void
+--
+bg=blue
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>123</x><y>32</y><w>320</w><h>190</h></coordinates><panel_attributes>package.vue2D.sprites
+--
+bg=pink
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>143</x><y>72</y><w>270</w><h>110</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+vue2D.sprites::ISprite
+--
+--
++dessiner(GraphicsContext g): void
++setCoordonnees(int xpix, int ypix): void
+--
+bg=blue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>983</x><y>352</y><w>170</w><h>110</h></coordinates><panel_attributes>application::MainJavaFX
+--
+-core: Core
+--
++start(Stage stage): void
++main(String[] args): void
+--
+bg=black</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1173</x><y>752</y><w>250</w><h>190</h></coordinates><panel_attributes>package.outils
+--
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1183</x><y>822</y><w>220</w><h>110</h></coordinates><panel_attributes>outils::Fichier
+--
+~sc = null: Scanner
+--
++Fichier(String nomFichier): ctor
++lireNombre(): int
+--
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>783</x><y>42</y><w>640</w><h>190</h></coordinates><panel_attributes>package.vue2D.javafx
+--
+bg=pink
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>793</x><y>72</y><w>350</w><h>150</h></coordinates><panel_attributes>vue2D.javafx::Dessin
+--
+-sprites: Collection&lt;ISprite&gt;
+-labyrinthe: ILabyrinthe
+-unite = 15: int
+-tampon: GraphicsContext
+-solImage: Image
+--
++Dessin(ILabyrinthe labyrinthe, Collection&lt;ISprite&gt; sprites): ctor
++chargementImages(): void
++dessinFond(): void
+--
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1173</x><y>82</y><w>230</w><h>140</h></coordinates><panel_attributes>vue2D.javafx::Vue
+--
+~dessin: Dessin
+~labyrinthe: ILabyrinthe
++scene: Scene
+--
++Vue(ILabyrinthe labyrinthe): ctor
++dessiner(): void
+--
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>393</x><y>768</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>673</x><y>802</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;60;100;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>663</x><y>910</y><w>540</w><h>50</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>520;10;10;30</additional_attributes></element><element><id>Text</id><coordinates><x>923</x><y>912</y><w>100</w><h>70</h></coordinates><panel_attributes>&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>153</x><y>662</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>70;90;10;90;10;10;70;10</additional_attributes></element><element><id>Text</id><coordinates><x>163</x><y>692</y><w>100</w><h>70</h></coordinates><panel_attributes>autre</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>193</x><y>752</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>53</x><y>544</y><w>270</w><h>350</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;330;250;330</additional_attributes></element><element><id>Text</id><coordinates><x>43</x><y>582</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>392</y><w>220</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>Text</id><coordinates><x>793</x><y>402</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1274</x><y>384</y><w>100</w><h>70</h></coordinates><panel_attributes>&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1144</x><y>212</y><w>250</w><h>190</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>230;10;230;170;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>493</x><y>182</y><w>100</w><h>50</h></coordinates><panel_attributes>/vue2D::AVue/
+--
+--
+--
+bg=blue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>403</x><y>162</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;30</additional_attributes></element><element><id>Relation</id><coordinates><x>593</x><y>162</y><w>70</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>50;10;10;30</additional_attributes></element><element><id>Text</id><coordinates><x>412</x><y>54</y><w>100</w><h>70</h></coordinates><panel_attributes>1..n</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>412</x><y>94</y><w>100</w><h>70</h></coordinates><panel_attributes>animations
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>402</x><y>74</y><w>410</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;390;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1073</x><y>214</y><w>200</w><h>470</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;450;180;450;180;80;60;10</additional_attributes></element><element><id>Text</id><coordinates><x>1093</x><y>634</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>553</x><y>214</y><w>710</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;20;40;30;690;30;690;10</additional_attributes></element><element><id>Relation</id><coordinates><x>713</x><y>174</y><w>580</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80;560;80;560;50</additional_attributes></element><element><id>Relation</id><coordinates><x>1103</x><y>34</y><w>180</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10;160;10;160;50</additional_attributes></element><element><id>Text</id><coordinates><x>1093</x><y>34</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1073</x><y>214</y><w>290</w><h>480</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;460;270;460;270;10</additional_attributes></element><element><id>Text</id><coordinates><x>1093</x><y>684</y><w>100</w><h>70</h></coordinates><panel_attributes>1</panel_attributes><additional_attributes></additional_attributes></element></diagram>
