@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 import labyrinthe.Salle;
 import org.junit.Test;
@@ -31,7 +32,6 @@ public class TestFichiersLabyrinthe {
         }
     }
 
-    @Test
     public void testPasDeDoublon() {
         File repertoire = new File("labys/");
         File[] fichiers = getFiles(repertoire);
@@ -39,12 +39,17 @@ public class TestFichiersLabyrinthe {
 
         for (File f : fichiers) {
             Fichier fichier = new Fichier(f.getPath());
-            
-            int tmpX = fichier.lireNombre();
-            int tmpY = fichier.lireNombre();
-            Salle s = new Salle(tmpX, tmpY);
-            assertFalse(salles.contains(s));
-            salles.add(s);
+
+            boolean continuer = true;
+            while (continuer) {
+                int tmpX = fichier.lireNombre();
+                int tmpY = fichier.lireNombre();
+                continuer = (tmpX != -1 || tmpY != -1);
+                Salle s = new Salle(tmpX, tmpY);
+
+                assertTrue(!salles.contains(s));
+                salles.add(s);
+            }
         }
     }
 

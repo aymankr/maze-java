@@ -1,9 +1,11 @@
 package application;
 
+import java.io.IOException;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.stage.Stage;
+import outils.ExceptionInvalidFile;
 import vue2D.javafx.Vue;
 
 
@@ -15,7 +17,7 @@ public class MainJavaFX extends Application {
     private Core core;
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws ExceptionInvalidFile, IOException {
         core = new Core();
         core.initLabyrinthe(); // initialisation du labyrinthe
         Vue vue = new vue2D.javafx.Vue(core.labyrinthe); // creation de la vue
@@ -44,7 +46,6 @@ public class MainJavaFX extends Application {
         Thread th = new Thread(task);
         th.setDaemon(true);
         th.start();
-        System.out.println("Bonjour");
     }
 
     public static void main(String[] args) {

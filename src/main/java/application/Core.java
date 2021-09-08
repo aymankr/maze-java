@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Collection;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
+import outils.ExceptionInvalidFile;
+import outils.Fichier;
 import personnages.IPersonnage;
 import vue2D.IVue;
 import vue2D.sprites.ISprite;
@@ -13,10 +15,11 @@ import vue2D.sprites.ISprite;
  * @author INFO Professors team
  */
 public class Core {
+
     ISprite heros;
     ILabyrinthe labyrinthe;
 
-    protected void initLabyrinthe() {
+    protected void initLabyrinthe() throws ExceptionInvalidFile, IOException {
         // creation du labyrinthe
         labyrinthe = new labyrinthe.Labyrinthe();
         chargementLaby("labys/level3.txt");
@@ -63,12 +66,14 @@ public class Core {
         System.out.println("Gagné!");
     }
 
-    private void chargementLaby(String fic) {
+    private void chargementLaby(String fic) throws ExceptionInvalidFile, IOException {
         try {
             labyrinthe.creerLabyrinthe(fic);
         } catch (IOException ex) {
-            ex.printStackTrace();
+            labyrinthe.creerLabyrinthe("labys/level7.txt");
         }
+
+        System.out.println(labyrinthe.getLargeur() + ", " + labyrinthe.getHauteur() + Fichier.testValide("labys/level3.txt"));
     }
 
     protected void temporisation(int nb) {

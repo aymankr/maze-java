@@ -2,6 +2,7 @@ package labyrinthe;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import outils.ExceptionInvalidFile;
 
 import outils.Fichier;
 import personnages.IPersonnage;
@@ -18,21 +19,21 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
     private int hauteur;
 
     @Override
-    public void creerLabyrinthe(String file) {
+    public void creerLabyrinthe(String file) throws ExceptionInvalidFile {
         Fichier f = new Fichier(file);
         // dimensions
-        largeur=f.lireNombre();
-        hauteur=f.lireNombre(); 
-        
+        largeur = f.lireNombre();
+        hauteur = f.lireNombre();
+
         int entreeX = f.lireNombre();
         int entreeY = f.lireNombre();
         Salle entr = new Salle(entreeX, entreeY);
         this.add(entr);
-        
+
         int sortieX = f.lireNombre();
         int sortieY = f.lireNombre();
         Salle sort = new Salle(sortieX, sortieY);
-        
+
         while (true) {
             int tmpX = f.lireNombre();
             int tmpY = f.lireNombre();
