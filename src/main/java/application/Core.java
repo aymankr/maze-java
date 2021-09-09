@@ -67,13 +67,7 @@ public class Core {
     }
 
     private void chargementLaby(String fic) throws ExceptionInvalidFile, IOException {
-        try {
-            labyrinthe.creerLabyrinthe(fic);
-        } catch (IOException ex) {
-            labyrinthe.creerLabyrinthe("labys/level7.txt");
-        }
-
-        System.out.println(labyrinthe.getLargeur() + ", " + labyrinthe.getHauteur() + Fichier.testValide("labys/level3.txt"));
+        labyrinthe.creerLabyrinthe(fic);
     }
 
     protected void temporisation(int nb) {

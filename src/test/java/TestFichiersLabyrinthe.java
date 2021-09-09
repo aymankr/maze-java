@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import labyrinthe.Salle;
 import org.junit.Test;
+import outils.ExceptionInvalidFile;
 import outils.Fichier;
 
 /**
@@ -24,32 +25,11 @@ public class TestFichiersLabyrinthe {
     }
 
     @Test
-    public void testCoordonneesSalles() {
+    public void testValide() throws ExceptionInvalidFile {
         File repertoire = new File("labys/");
         File[] fichiers = getFiles(repertoire);
         for (File f : fichiers) {
-            assertTrue(testCoordonneesSallesFichier(f));
-        }
-    }
-
-    public void testPasDeDoublon() {
-        File repertoire = new File("labys/");
-        File[] fichiers = getFiles(repertoire);
-        ArrayList<Salle> salles = new ArrayList<>();
-
-        for (File f : fichiers) {
-            Fichier fichier = new Fichier(f.getPath());
-
-            boolean continuer = true;
-            while (continuer) {
-                int tmpX = fichier.lireNombre();
-                int tmpY = fichier.lireNombre();
-                continuer = (tmpX != -1 || tmpY != -1);
-                Salle s = new Salle(tmpX, tmpY);
-
-                assertTrue(!salles.contains(s));
-                salles.add(s);
-            }
+            assertTrue(Fichier.testValide(f.getPath()));
         }
     }
 
@@ -58,21 +38,5 @@ public class TestFichiersLabyrinthe {
         File repertoire = new File("labys/");
         File[] fichiers = getFiles(repertoire);
         fail("not implemented");
-    }
-
-    public boolean testCoordonneesSallesFichier(File f) {
-        Fichier fichier = new Fichier(f.getPath());
-        int largeur = fichier.lireNombre();
-        int hauteur = fichier.lireNombre();
-        boolean arreter = false;
-        boolean estValide = false;
-
-        while (!arreter) {
-            int tmpX = fichier.lireNombre();
-            int tmpY = fichier.lireNombre();
-            estValide = (tmpX >= 0 && tmpX < largeur && tmpY >= 0 && tmpY < hauteur);
-            arreter = (tmpX == -1 || tmpY == -1);
-        }
-        return estValide;
     }
 }

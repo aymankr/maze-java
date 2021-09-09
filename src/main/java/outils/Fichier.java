@@ -33,23 +33,28 @@ public class Fichier {
         return -1;
     }
 
-    public static boolean testValide(String nomFichier) {
+    public static boolean testValide(String nomFichier) throws ExceptionInvalidFile {
         ArrayList<Salle> salles = new ArrayList<>();
+        HashSet<Salle> sallesUniques = new HashSet<>();
 
         Fichier fichier = new Fichier(nomFichier);
         boolean valide = true;
         int largeur = fichier.lireNombre();
         int hauteur = fichier.lireNombre();
 
-        boolean continuer = true;
-        while (continuer) {
+        while (true) {
             int tmpX = fichier.lireNombre();
             int tmpY = fichier.lireNombre();
-            continuer = (tmpX != -1 || tmpY != -1);
+            if ((tmpX == -1 || tmpY == -1)) {
+                break;
+            }
             Salle s = new Salle(tmpX, tmpY);
 
-            valide = (!salles.contains(s) && tmpX >= 0 && tmpX < largeur && tmpY >= 0 && tmpY < hauteur);
+            if (!(salles.size() == sallesUniques.size() && tmpX >= 0 && tmpX < largeur && tmpY >= 0 && tmpY < hauteur)) {
+                throw new ExceptionInvalidFile();
+            }
             salles.add(s);
+            sallesUniques.add(s);
         }
         return valide;
     }

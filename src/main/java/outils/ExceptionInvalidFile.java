@@ -11,7 +11,7 @@ package outils;
  */
 public class ExceptionInvalidFile extends Exception {
 
-    public ExceptionInvalidFile(String message) {
-        super(message);
+    public ExceptionInvalidFile() {
+        super();
     }
 }

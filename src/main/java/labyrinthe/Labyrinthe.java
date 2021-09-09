@@ -21,6 +21,13 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
     @Override
     public void creerLabyrinthe(String file) throws ExceptionInvalidFile {
         Fichier f = new Fichier(file);
+        try {
+            Fichier.testValide(file);
+        }
+        catch (ExceptionInvalidFile ex) {
+            f = new Fichier("labys/level7.txt");
+        }
+        
         // dimensions
         largeur = f.lireNombre();
         hauteur = f.lireNombre();
@@ -28,11 +35,13 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         int entreeX = f.lireNombre();
         int entreeY = f.lireNombre();
         Salle entr = new Salle(entreeX, entreeY);
+        entree = entr;
         this.add(entr);
 
         int sortieX = f.lireNombre();
         int sortieY = f.lireNombre();
         Salle sort = new Salle(sortieX, sortieY);
+        sortie = sort;
 
         while (true) {
             int tmpX = f.lireNombre();
