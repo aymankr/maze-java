@@ -15,11 +15,12 @@ Pas de difficulté particulière pour la réalisation de ces parties.
 ## 08/09 :
 1. premiere heure : exercice 6 fait, exercice 7 en cours (les tests)
 2. seconde heure : exercices 7, 8 fait, exercice 9 en cours (tests et exceptions)
-Difficulté au niveau des tests pour savoir si un niveau est valide ou non, testValide renvoie faux pour les levels valide alors qu'ils sont valides
+Difficulté de comprendre la demande du sujet sur la manière d'écrire les tests et les utiliser avec la classe Fichier
 
 ## 09/09 :
 1. testValide et traitement des exceptions terminés (exercices 8 et 9)
 2. Objectif 2 terminé
+3. Exercice 10 fait mais à tester, exercice 11 et 12 en cours
 
 ## 10/09 :
 1. 

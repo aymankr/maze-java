@@ -2,6 +2,7 @@ package labyrinthe;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import outils.ExceptionInvalidFile;
 
 import outils.Fichier;
@@ -23,11 +24,10 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         Fichier f = new Fichier(file);
         try {
             Fichier.testValide(file);
-        }
-        catch (ExceptionInvalidFile ex) {
+        } catch (ExceptionInvalidFile ex) {
             f = new Fichier("labys/level7.txt");
         }
-        
+
         // dimensions
         largeur = f.lireNombre();
         hauteur = f.lireNombre();
@@ -57,7 +57,16 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
 
     @Override
     public Collection<ISalle> sallesAccessibles(IPersonnage bob) {
-        return null;
+        ISalle sallePersonnage = bob.getPosition();
+        HashSet<ISalle> listeAccessibles = new HashSet<>();
+
+        for (ISalle s : this.subList(modCount, modCount)) {
+            if (sallePersonnage.estAdjacente(s)) {
+                listeAccessibles.add(s);
+            }
+        }
+
+        return listeAccessibles;
     }
 
     @Override

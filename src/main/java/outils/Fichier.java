@@ -33,28 +33,46 @@ public class Fichier {
         return -1;
     }
 
-    public static boolean testValide(String nomFichier) throws ExceptionInvalidFile {
+    public static boolean testPasDeDoublon(String nomFichier) {
         ArrayList<Salle> salles = new ArrayList<>();
         HashSet<Salle> sallesUniques = new HashSet<>();
 
         Fichier fichier = new Fichier(nomFichier);
-        boolean valide = true;
+
+        int tmpX = 0, tmpY = 0;
+        while (tmpX != -1 && tmpY != -1) {
+            tmpX = fichier.lireNombre();
+            tmpY = fichier.lireNombre();
+
+            Salle s = new Salle(tmpX, tmpY);
+            salles.add(s);
+            sallesUniques.add(s);
+        }
+        return salles.size() == sallesUniques.size();
+    }
+
+    public static boolean testCoordonneesSallesFichier(String nomFichier) {
+        Fichier fichier = new Fichier(nomFichier);
+
+        int tmpX = 0, tmpY = 0;
         int largeur = fichier.lireNombre();
         int hauteur = fichier.lireNombre();
 
-        while (true) {
-            int tmpX = fichier.lireNombre();
-            int tmpY = fichier.lireNombre();
-            if ((tmpX == -1 || tmpY == -1)) {
-                break;
+        while (tmpX != -1 && tmpY != -1) {
+            if (!(tmpX >= 0 && tmpX < largeur && tmpY >= 0 && tmpY < hauteur)) {
+                return false;
             }
-            Salle s = new Salle(tmpX, tmpY);
+            
+            tmpX = fichier.lireNombre();
+            tmpY = fichier.lireNombre();
+        }
+        return true;
+    }
 
-            if (!(salles.size() == sallesUniques.size() && tmpX >= 0 && tmpX < largeur && tmpY >= 0 && tmpY < hauteur)) {
-                throw new ExceptionInvalidFile();
-            }
-            salles.add(s);
-            sallesUniques.add(s);
+    public static boolean testValide(String nomFichier) throws ExceptionInvalidFile {
+        boolean valide = testPasDeDoublon(nomFichier) && testCoordonneesSallesFichier(nomFichier);
+        if (!valide) {
+            throw new ExceptionInvalidFile();
         }
         return valide;
     }

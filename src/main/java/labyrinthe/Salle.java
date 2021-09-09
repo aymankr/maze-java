@@ -5,8 +5,6 @@
  */
 package labyrinthe;
 
-import labyrinthe.ISalle;
-
 /**
  *
  * @author aykachmar
@@ -61,6 +59,15 @@ public class Salle implements ISalle {
 
     @Override
     public boolean estAdjacente(ISalle autre) {
+        for (Direction d : Direction.toutes()) {
+             if (salleSuivante(d).getX() == autre.getX() && salleSuivante(d).getY() == autre.getY()) {
+                 return true;
+             }
+        }
         return false;
+    }
+    
+    public Salle salleSuivante(Direction d) {
+        return new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
     }
 }
