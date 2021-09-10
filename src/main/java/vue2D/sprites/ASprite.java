@@ -6,6 +6,7 @@
 package vue2D.sprites;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import personnages.IPersonnage;
 
 /**
@@ -15,6 +16,7 @@ import personnages.IPersonnage;
 public abstract class ASprite implements ISprite {
 
     IPersonnage IPerso;
+    Image image;
 
     public ASprite(IPersonnage p) {
         IPerso = p;
@@ -22,7 +24,8 @@ public abstract class ASprite implements ISprite {
     
     @Override
     public void dessiner(GraphicsContext g) {
-        
+        int unite = 15;
+        g.drawImage(image, IPerso.getPosition().getX()*unite, IPerso.getPosition().getY()*unite, unite, unite);
     }
 
     @Override

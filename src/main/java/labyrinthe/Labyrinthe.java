@@ -60,12 +60,12 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         ISalle sallePersonnage = bob.getPosition();
         HashSet<ISalle> listeAccessibles = new HashSet<>();
 
-        for (ISalle s : this.subList(modCount, modCount)) {
+        for (ISalle s : this.subList(0, modCount)) {
             if (sallePersonnage.estAdjacente(s)) {
                 listeAccessibles.add(s);
             }
         }
-
+        
         return listeAccessibles;
     }
 

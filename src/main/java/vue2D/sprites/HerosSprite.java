@@ -5,7 +5,6 @@
  */
 package vue2D.sprites;
 
-import static java.awt.event.KeyEvent.VK_UP;
 import java.util.Collection;
 import javafx.event.EventHandler;
 import javafx.scene.image.Image;
@@ -21,16 +20,14 @@ import personnages.IPersonnage;
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
-    Image image;
-
     public HerosSprite(IPersonnage IPerso, Image img) {
         super(IPerso);
-        image = img;
+        super.image = new Image("file:icons/link/LinkRunShieldL1.gif");
     }
 
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
-        return null;
+        return IPerso.faitSonChoix(sallesAccessibles);
     }
 
     @Override
@@ -40,7 +37,6 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     @Override
     public void setPosition(ISalle s) {
-
     }
 
     @Override

@@ -54,7 +54,7 @@ public class Dessin extends Canvas {
     
     public void dessinSprites() {
         for (ISprite s : sprites) {
-            tampon.drawImage(herosImage, s.getPosition().getX()*unite, s.getPosition().getY()*unite, unite, unite);
+            s.dessiner(tampon);
         }
     }
 }

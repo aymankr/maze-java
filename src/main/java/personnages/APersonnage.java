@@ -13,13 +13,16 @@ import labyrinthe.ISalle;
  */
 public abstract class APersonnage implements IPersonnage {
     
+    protected ISalle salleChoisie;
+    ISalle position;
+    
     @Override
     public ISalle getPosition() {
-        return null;
+        return position;
     }
     
     @Override
     public void setPosition(ISalle s) {
-
+        salleChoisie = s;
     }
 }

@@ -14,7 +14,7 @@ Pas de difficulté particulière pour la réalisation de ces parties.
 
 ## 08/09 :
 1. premiere heure : exercice 6 fait, exercice 7 en cours (les tests)
-2. seconde heure : exercices 7, 8 fait, exercice 9 en cours (tests et exceptions)
+2. seconde heure : exercices 7, 8 fait, exercice 9 en cours (tests et exceptions) <br/>
 Difficulté de comprendre la demande du sujet sur la manière d'écrire les tests et les utiliser avec la classe Fichier
 
 ## 09/09 :
@@ -24,5 +24,7 @@ Difficulté de comprendre la demande du sujet sur la manière d'écrire les test
 
 ## 10/09 :
 1. Exercices 11, 12, 13, 14 fait mais à tester avec l'exercice 15 en cours.
+2. Exercice 15 terminé
+3. Objectif 3 terminé
 
 
