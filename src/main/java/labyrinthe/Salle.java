@@ -67,7 +67,8 @@ public class Salle implements ISalle {
         return false;
     }
     
-    public Salle salleSuivante(Direction d) {
+    @Override
+    public ISalle salleSuivante(Direction d) {
         return new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
     }
 }

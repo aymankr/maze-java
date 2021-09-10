@@ -2,12 +2,14 @@ package application;
 
 import java.io.IOException;
 import java.util.Collection;
+import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import outils.ExceptionInvalidFile;
 import outils.Fichier;
 import personnages.IPersonnage;
 import vue2D.IVue;
+import vue2D.sprites.HerosSprite;
 import vue2D.sprites.ISprite;
 
 /**
@@ -27,9 +29,9 @@ public class Core {
 
     protected void initSprites(IVue vue) {
         // creation du heros 
-        //IPersonnage h = new personnages.Heros(labyrinthe.getEntree());
-        //this.heros = new HerosSprite(h, labyrinthe);
-        //vue.add(this.heros);
+        IPersonnage h = new personnages.Heros(labyrinthe.getEntree());
+        this.heros = new HerosSprite(h, (Image) labyrinthe);
+        vue.add(this.heros);
     }
 
     protected void jeu(IVue vue) {

@@ -23,6 +23,6 @@ Difficulté de comprendre la demande du sujet sur la manière d'écrire les test
 3. Exercice 10 fait mais à tester, exercice 11 et 12 en cours
 
 ## 10/09 :
-1. 
+1. Exercices 11, 12, 13, 14 fait mais à tester avec l'exercice 15 en cours.
 
 

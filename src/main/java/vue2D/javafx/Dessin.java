@@ -21,6 +21,7 @@ public class Dessin extends Canvas {
     private GraphicsContext tampon;
     private Image solImage;
     private Image salleImage;
+    private Image herosImage;
 
     public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.sprites = sprites;
@@ -31,11 +32,13 @@ public class Dessin extends Canvas {
         chargementImages();
         dessinFond();
         dessinSalles();
+        dessinSprites();
     }
 
     public void chargementImages() {
         solImage = new Image("file:icons/pyramide.jpg");
         salleImage = new Image("file:icons/ground.gif");
+        herosImage = new Image("file:icons/link/LinkRunShieldL1.gif");
     }
 
     public void dessinFond() {
@@ -46,6 +49,12 @@ public class Dessin extends Canvas {
     public void dessinSalles() {
         for (ISalle s : labyrinthe) {
             tampon.drawImage(salleImage, s.getX()*unite, s.getY()*unite, unite, unite);
+        }
+    }
+    
+    public void dessinSprites() {
+        for (ISprite s : sprites) {
+            tampon.drawImage(herosImage, s.getPosition().getX()*unite, s.getPosition().getY()*unite, unite, unite);
         }
     }
 }
