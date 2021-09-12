@@ -21,7 +21,6 @@ public class Dessin extends Canvas {
     private GraphicsContext tampon;
     private Image solImage;
     private Image salleImage;
-    private Image herosImage;
 
     public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.sprites = sprites;
@@ -38,7 +37,6 @@ public class Dessin extends Canvas {
     public void chargementImages() {
         solImage = new Image("file:icons/pyramide.jpg");
         salleImage = new Image("file:icons/ground.gif");
-        herosImage = new Image("file:icons/link/LinkRunShieldL1.gif");
     }
 
     public void dessinFond() {

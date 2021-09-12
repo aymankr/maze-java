@@ -2,15 +2,15 @@ package application;
 
 import java.io.IOException;
 import java.util.Collection;
-import javafx.scene.image.Image;
+import java.util.concurrent.CopyOnWriteArrayList;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import outils.ExceptionInvalidFile;
-import outils.Fichier;
 import personnages.IPersonnage;
 import vue2D.IVue;
 import vue2D.sprites.HerosSprite;
 import vue2D.sprites.ISprite;
+import vue2D.sprites.MonstreSprite;
 
 /**
  *
@@ -30,8 +30,15 @@ public class Core {
     protected void initSprites(IVue vue) {
         // creation du heros 
         IPersonnage h = new personnages.Heros(labyrinthe.getEntree());
-        this.heros = new HerosSprite(h, new Image("file:icons/link/LinkRunShieldL1.gif"));
+        this.heros = new HerosSprite(h, labyrinthe);
         vue.add(this.heros);
+
+        CopyOnWriteArrayList<ISprite> monstres = new CopyOnWriteArrayList();
+        for (int i = 0; i<=9; i++) {
+            IPersonnage m = new personnages.Monstre(labyrinthe.getSortie());
+            monstres.add(new MonstreSprite(m, labyrinthe));
+        }
+        vue.addAll(monstres);
     }
 
     protected void jeu(IVue vue) {
@@ -49,6 +56,9 @@ public class Core {
             ISprite monstre = null;
             for (ISprite p : vue) {
                 if (p != heros) {
+                    Collection<ISalle> sallesAccessibles = labyrinthe.sallesAccessibles(p);
+                    destination = p.faitSonChoix(sallesAccessibles);
+                    p.setPosition(destination);
                     if (p.getPosition() == heros.getPosition()) {
                         System.out.println("Collision !!");
                         collision = true;

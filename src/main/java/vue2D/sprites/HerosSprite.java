@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import labyrinthe.Direction;
+import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import personnages.IPersonnage;
 
@@ -20,9 +21,9 @@ import personnages.IPersonnage;
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
-    public HerosSprite(IPersonnage IPerso, Image img) {
-        super(IPerso);
-        super.image = new Image("file:icons/link/LinkRunShieldL1.gif");
+    public HerosSprite(IPersonnage IPerso, ILabyrinthe l) {
+        super(IPerso, l);
+        image = new Image("file:icons/link/LinkRunShieldL1.gif");
     }
 
     @Override
@@ -37,25 +38,26 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     @Override
     public void setPosition(ISalle s) {
+        IPerso.setPosition(s);
     }
 
     @Override
     public void handle(KeyEvent e) {
         KeyCode keyCode = e.getCode();
-        IPersonnage p = this.IPerso;
+        ISalle position = this.IPerso.getPosition();
 
         switch (keyCode) {
             case LEFT:
-                p.setPosition(p.getPosition().salleSuivante(Direction.OUEST));
+                setPosition(position.salleSuivante(Direction.OUEST));
                 break;
             case RIGHT:
-                p.setPosition(p.getPosition().salleSuivante(Direction.EST));
+                setPosition(position.salleSuivante(Direction.EST));
                 break;
             case UP:
-                p.setPosition(p.getPosition().salleSuivante(Direction.NORD));
+                setPosition(position.salleSuivante(Direction.NORD));
                 break;
             case DOWN:
-                p.setPosition(p.getPosition().salleSuivante(Direction.SUD));
+                setPosition(position.salleSuivante(Direction.SUD));
                 break;
         }
     }

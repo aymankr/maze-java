@@ -7,6 +7,7 @@ package vue2D.sprites;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import labyrinthe.ILabyrinthe;
 import personnages.IPersonnage;
 
 /**
@@ -17,9 +18,11 @@ public abstract class ASprite implements ISprite {
 
     IPersonnage IPerso;
     Image image;
+    ILabyrinthe labyrinthe;
 
-    public ASprite(IPersonnage p) {
+    public ASprite(IPersonnage p, ILabyrinthe l) {
         IPerso = p;
+        labyrinthe = l;
     }
     
     @Override
