@@ -13,6 +13,7 @@ import javafx.scene.input.KeyEvent;
 import labyrinthe.Direction;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
+import labyrinthe.Salle;
 import personnages.IPersonnage;
 
 /**
@@ -20,7 +21,7 @@ import personnages.IPersonnage;
  * @author aykachmar
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
-
+    
     public HerosSprite(IPersonnage IPerso, ILabyrinthe l) {
         super(IPerso, l);
         image = new Image("file:icons/link/LinkRunShieldL1.gif");
@@ -44,20 +45,20 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
     @Override
     public void handle(KeyEvent e) {
         KeyCode keyCode = e.getCode();
-        ISalle position = this.IPerso.getPosition();
+        Salle position = (Salle) IPerso.getPosition();
 
         switch (keyCode) {
             case LEFT:
-                setPosition(position.salleSuivante(Direction.OUEST));
+                setPosition(position.salleSuivante(Direction.OUEST, this.labyrinthe));
                 break;
             case RIGHT:
-                setPosition(position.salleSuivante(Direction.EST));
+                setPosition(position.salleSuivante(Direction.EST, this.labyrinthe));
                 break;
             case UP:
-                setPosition(position.salleSuivante(Direction.NORD));
+                setPosition(position.salleSuivante(Direction.NORD, this.labyrinthe));
                 break;
             case DOWN:
-                setPosition(position.salleSuivante(Direction.SUD));
+                setPosition(position.salleSuivante(Direction.SUD, this.labyrinthe)) ;
                 break;
         }
     }

@@ -1,5 +1,7 @@
 package labyrinthe;
 
+import java.util.Collection;
+
 /**
  *
  * @author INFO Professors team
@@ -11,6 +13,4 @@ public interface ISalle {
     public int getY(); // ordonnee
 
     public boolean estAdjacente(ISalle autre);
-    
-    public ISalle salleSuivante(Direction d);
 }

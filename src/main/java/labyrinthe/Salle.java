@@ -5,19 +5,22 @@
  */
 package labyrinthe;
 
+import java.util.Collection;
+
 /**
  *
  * @author aykachmar
  */
 public class Salle implements ISalle {
+
     private int x;
     private int y;
-    
+
     public Salle(int X, int Y) {
-       x = X;
-       y = Y;
+        x = X;
+        y = Y;
     }
-    
+
     @Override
     public int getX() {
         return x;
@@ -60,15 +63,21 @@ public class Salle implements ISalle {
     @Override
     public boolean estAdjacente(ISalle autre) {
         for (Direction d : Direction.toutes()) {
-             if (salleSuivante(d).getX() == autre.getX() && salleSuivante(d).getY() == autre.getY()) {
-                 return true;
-             }
+            ISalle tmp = new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
+            if (tmp.getX() == autre.getX() && tmp.getY() == autre.getY()) {
+                return true;
+            }
         }
         return false;
     }
-    
-    @Override
-    public ISalle salleSuivante(Direction d) {
-        return new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
+
+    public ISalle salleSuivante(Direction d, Collection<ISalle> salles) {
+        ISalle suivante = new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
+        for (ISalle s : salles) {
+            if (suivante.getX() == s.getX() && suivante.getY() == s.getY()) {
+                return s;
+            }
+        }
+        return null;
     }
 }

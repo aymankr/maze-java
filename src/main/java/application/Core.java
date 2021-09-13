@@ -56,9 +56,6 @@ public class Core {
             ISprite monstre = null;
             for (ISprite p : vue) {
                 if (p != heros) {
-                    Collection<ISalle> sallesAccessibles = labyrinthe.sallesAccessibles(p);
-                    destination = p.faitSonChoix(sallesAccessibles);
-                    p.setPosition(destination);
                     if (p.getPosition() == heros.getPosition()) {
                         System.out.println("Collision !!");
                         collision = true;
