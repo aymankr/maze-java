@@ -5,9 +5,12 @@
  */
 package vue2D.sprites;
 
+import static java.lang.Math.abs;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
+import labyrinthe.ISalle;
+import labyrinthe.Salle;
 import personnages.IPersonnage;
 
 /**
@@ -24,15 +27,29 @@ public abstract class ASprite implements ISprite {
         IPerso = p;
         labyrinthe = l;
     }
-    
+
     @Override
     public void dessiner(GraphicsContext g) {
         int unite = 15;
-        g.drawImage(image, IPerso.getPosition().getX()*unite, IPerso.getPosition().getY()*unite, unite, unite);
+        Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe);
+        Salle position = (Salle) IPerso.getPosition();
+
+        int xpix = 0;
+        int ypix = 0;
+
+        int deplaceX = position.deplacementXPix(positionChoisie);
+        int deplaceY = position.deplacementYPix(positionChoisie);
+
+        while (abs(positionChoisie.getX() * unite - position.getX() * unite + xpix) < 1 || abs(positionChoisie.getY() * unite - position.getY() * unite + ypix) < 1) {
+            g.drawImage(image, position.getX() * unite + xpix, position.getY() * unite + ypix, unite, unite);
+            System.out.println(deplaceX +", " + deplaceY);
+            xpix += deplaceX;
+            ypix += deplaceY;
+        }
     }
 
     @Override
     public void setCoordonnees(int xpix, int ypix) {
-        
+
     }
 }

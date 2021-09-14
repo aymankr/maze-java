@@ -27,4 +27,10 @@ Difficulté de comprendre la demande du sujet sur la manière d'écrire les test
 2. Exercice 15 terminé
 3. Objectif 3 terminé
 
+## 13/09 :
+1. Correction au niveau des déplacements, car il ne faut pas créer de nouvelles salles, mais il faut utiliser celles déjà présentes
+
+## 14/09 :
+1. Essai pour effectuer des déplacements fluides
+
 
