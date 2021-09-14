@@ -22,8 +22,11 @@ public abstract class ASprite implements ISprite {
     IPersonnage IPerso;
     Image image;
     ILabyrinthe labyrinthe;
+    int xpix, ypix;
 
     public ASprite(IPersonnage p, ILabyrinthe l) {
+        int xpix = 0;
+        int ypix = 0;
         IPerso = p;
         labyrinthe = l;
     }
@@ -34,18 +37,23 @@ public abstract class ASprite implements ISprite {
         Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe);
         Salle position = (Salle) IPerso.getPosition();
 
-        int xpix = 0;
-        int ypix = 0;
+        int deplaceX = 1;
+        int deplaceY = 1;
 
-        int deplaceX = position.deplacementXPix(positionChoisie);
-        int deplaceY = position.deplacementYPix(positionChoisie);
+        if (position.getX() * unite > positionChoisie.getX() * unite) {
+            deplaceX *= -1;
+        }
 
-        while (abs(positionChoisie.getX() * unite - position.getX() * unite + xpix) < 1 || abs(positionChoisie.getY() * unite - position.getY() * unite + ypix) < 1) {
-            g.drawImage(image, position.getX() * unite + xpix, position.getY() * unite + ypix, unite, unite);
-            System.out.println(deplaceX +", " + deplaceY);
+        if (position.getY() * unite > positionChoisie.getY() * unite) {
+            deplaceY *= -1;
+        }
+
+        if (positionChoisie != position) {
             xpix += deplaceX;
             ypix += deplaceY;
         }
+
+        g.drawImage(image, IPerso.getPosition().getX() * unite + xpix, IPerso.getPosition().getY() * unite + ypix, unite, unite);
     }
 
     @Override

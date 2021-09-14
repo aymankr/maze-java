@@ -14,6 +14,7 @@ import labyrinthe.Direction;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import labyrinthe.Salle;
+import personnages.Heros;
 import personnages.IPersonnage;
 
 /**
@@ -22,8 +23,11 @@ import personnages.IPersonnage;
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
     
+    Heros heros;
+    
     public HerosSprite(IPersonnage IPerso, ILabyrinthe l) {
         super(IPerso, l);
+        heros = (Heros) IPerso;
         image = new Image("file:icons/link/LinkRunShieldL1.gif");
     }
 
@@ -49,16 +53,16 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
         switch (keyCode) {
             case LEFT:
-                setPosition(position.salleSuivante(Direction.OUEST, this.labyrinthe));
+                heros.salleChoisie = position.salleSuivante(Direction.OUEST, this.labyrinthe);
                 break;
             case RIGHT:
-                setPosition(position.salleSuivante(Direction.EST, this.labyrinthe));
+                heros.salleChoisie = position.salleSuivante(Direction.EST, this.labyrinthe);
                 break;
             case UP:
-                setPosition(position.salleSuivante(Direction.NORD, this.labyrinthe));
+                heros.salleChoisie = position.salleSuivante(Direction.NORD, this.labyrinthe);
                 break;
             case DOWN:
-                setPosition(position.salleSuivante(Direction.SUD, this.labyrinthe)) ;
+                heros.salleChoisie = position.salleSuivante(Direction.SUD, this.labyrinthe);
                 break;
         }
     }

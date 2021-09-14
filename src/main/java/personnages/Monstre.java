@@ -25,8 +25,6 @@ public class Monstre extends APersonnage {
         int index = r.nextInt(sallesAccessibles.size());
         
         ISalle choix = (ISalle) sallesAccessibles.toArray()[index];
-        salleChoisie = choix;
-        super.position = choix;
         return choix;
     }
 }

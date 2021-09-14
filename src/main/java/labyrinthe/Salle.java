@@ -80,18 +80,4 @@ public class Salle implements ISalle {
         }
         return null;
     }
-    
-    public int deplacementXPix(ISalle suivante) {
-        if (x < suivante.getX()) {
-            return 1;
-        }
-        return -1;
-    }
-    
-    public int deplacementYPix(ISalle suivante) {
-        if (y < suivante.getY()) {
-            return 1;
-        }
-        return -1;
-    }
 }

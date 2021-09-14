@@ -13,7 +13,7 @@ import labyrinthe.ISalle;
  */
 public abstract class APersonnage implements IPersonnage {
     
-    protected ISalle salleChoisie;
+    public ISalle salleChoisie;
     ISalle position;
     
     @Override
@@ -23,6 +23,6 @@ public abstract class APersonnage implements IPersonnage {
     
     @Override
     public void setPosition(ISalle s) {
-        salleChoisie = s;
+        position = s;
     }
 }
