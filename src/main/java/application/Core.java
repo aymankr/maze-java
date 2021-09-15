@@ -33,12 +33,12 @@ public class Core {
         this.heros = new HerosSprite(h, labyrinthe);
         vue.add(this.heros);
 
-        CopyOnWriteArrayList<ISprite> monstres = new CopyOnWriteArrayList();
+        /*CopyOnWriteArrayList<ISprite> monstres = new CopyOnWriteArrayList();
         for (int i = 0; i<=9; i++) {
             IPersonnage m = new personnages.Monstre(labyrinthe.getSortie());
             monstres.add(new MonstreSprite(m, labyrinthe));
         }
-        vue.addAll(monstres);
+        vue.addAll(monstres);*/
     }
 
     protected void jeu(IVue vue) {

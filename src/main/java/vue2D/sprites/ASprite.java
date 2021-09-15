@@ -22,11 +22,13 @@ public abstract class ASprite implements ISprite {
     IPersonnage IPerso;
     Image image;
     ILabyrinthe labyrinthe;
-    int xpix, ypix;
+    int x;
+    int y;
+    Salle posGraphique;
 
     public ASprite(IPersonnage p, ILabyrinthe l) {
-        int xpix = 0;
-        int ypix = 0;
+        x = 0;
+        y = 0;
         IPerso = p;
         labyrinthe = l;
     }
@@ -37,27 +39,38 @@ public abstract class ASprite implements ISprite {
         Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe);
         Salle position = (Salle) IPerso.getPosition();
 
-        int deplaceX = 1;
-        int deplaceY = 1;
+        int deplaceX = 0;
+        int deplaceY = 0;
 
-        if (position.getX() * unite > positionChoisie.getX() * unite) {
-            deplaceX *= -1;
+        if (positionChoisie != position && position.getX() > positionChoisie.getX()) {
+            deplaceX = -1;
+        } else if (positionChoisie != position && position.getX() < positionChoisie.getX()){
+            deplaceX = 1;
         }
 
-        if (position.getY() * unite > positionChoisie.getY() * unite) {
-            deplaceY *= -1;
+        if (positionChoisie != position && position.getY() > positionChoisie.getY()) {
+            deplaceY = -1;
+        } else if (positionChoisie != position && position.getY() < positionChoisie.getY()){
+            deplaceY = 1;
         }
 
-        if (positionChoisie != position) {
-            xpix += deplaceX;
-            ypix += deplaceY;
+        posGraphique = new Salle(position.getX() * unite + x, position.getY() * unite + y);
+        if (positionChoisie != posGraphique) {
+            setCoordonnees(deplaceX, deplaceY);
+        } else {
+            x = 0;
+            y = 0;
         }
 
-        g.drawImage(image, IPerso.getPosition().getX() * unite + xpix, IPerso.getPosition().getY() * unite + ypix, unite, unite);
+        int X = posGraphique.getX() * unite + x;
+        int Y = posGraphique.getY() * unite + y;
+        System.out.println(X + ", " + Y);
+        g.drawImage(image, posGraphique.getX(), posGraphique.getY(), unite, unite);
     }
 
     @Override
     public void setCoordonnees(int xpix, int ypix) {
-
+        x += xpix;
+        y += ypix;
     }
 }

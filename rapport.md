@@ -33,4 +33,7 @@ Difficulté de comprendre la demande du sujet sur la manière d'écrire les test
 ## 14/09 :
 1. Essai pour effectuer des déplacements fluides
 
+## 15/09 :
+1. Continuité déplacements fluides
+
 
