@@ -24,48 +24,55 @@ public abstract class ASprite implements ISprite {
     ILabyrinthe labyrinthe;
     int x;
     int y;
-    Salle posGraphique;
+    Salle posPrecedent;
+    boolean enDeplacement;
 
     public ASprite(IPersonnage p, ILabyrinthe l) {
         x = 0;
         y = 0;
         IPerso = p;
         labyrinthe = l;
+        enDeplacement = false;
     }
 
     @Override
     public void dessiner(GraphicsContext g) {
         int unite = 15;
-        Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe);
         Salle position = (Salle) IPerso.getPosition();
+        Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe);
+
+        if (position != positionChoisie) {
+            posPrecedent = position;
+        }
 
         int deplaceX = 0;
         int deplaceY = 0;
+        if (posPrecedent != null) {
+            if (posPrecedent.getX() > positionChoisie.getX()) {
+                deplaceX = -1;
+            } else if (posPrecedent.getX() < positionChoisie.getX()) {
+                deplaceX = 1;
+            }
 
-        if (positionChoisie != position && position.getX() > positionChoisie.getX()) {
-            deplaceX = -1;
-        } else if (positionChoisie != position && position.getX() < positionChoisie.getX()){
-            deplaceX = 1;
+            if (posPrecedent.getY() > positionChoisie.getY()) {
+                deplaceY = -1;
+            } else if (posPrecedent.getY() < positionChoisie.getY()) {
+                deplaceY = 1;
+            }
         }
 
-        if (positionChoisie != position && position.getY() > positionChoisie.getY()) {
-            deplaceY = -1;
-        } else if (positionChoisie != position && position.getY() < positionChoisie.getY()){
-            deplaceY = 1;
-        }
-
-        posGraphique = new Salle(position.getX() * unite + x, position.getY() * unite + y);
-        if (positionChoisie != posGraphique) {
+        if (posPrecedent != null) {
+            enDeplacement = true;
             setCoordonnees(deplaceX, deplaceY);
+            g.drawImage(image, posPrecedent.getX() * unite + x, posPrecedent.getY() * unite + y, unite, unite);
+            if (posPrecedent.getX() * unite + x == positionChoisie.getX() * unite && posPrecedent.getY() * unite + y == positionChoisie.getY() * unite) {
+                posPrecedent = null;
+                x = y = 0;
+                enDeplacement = false;
+            }
         } else {
-            x = 0;
-            y = 0;
+            g.drawImage(image, position.getX() * unite, position.getY() * unite, unite, unite);
         }
-
-        int X = posGraphique.getX() * unite + x;
-        int Y = posGraphique.getY() * unite + y;
-        System.out.println(X + ", " + Y);
-        g.drawImage(image, posGraphique.getX(), posGraphique.getY(), unite, unite);
     }
 
     @Override

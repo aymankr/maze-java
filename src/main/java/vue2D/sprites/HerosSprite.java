@@ -22,9 +22,9 @@ import personnages.IPersonnage;
  * @author aykachmar
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
-    
+
     Heros heros;
-    
+
     public HerosSprite(IPersonnage IPerso, ILabyrinthe l) {
         super(IPerso, l);
         heros = (Heros) IPerso;
@@ -51,19 +51,21 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
         KeyCode keyCode = e.getCode();
         Salle position = (Salle) IPerso.getPosition();
 
-        switch (keyCode) {
-            case LEFT:
-                heros.salleChoisie = position.salleSuivante(Direction.OUEST, this.labyrinthe);
-                break;
-            case RIGHT:
-                heros.salleChoisie = position.salleSuivante(Direction.EST, this.labyrinthe);
-                break;
-            case UP:
-                heros.salleChoisie = position.salleSuivante(Direction.NORD, this.labyrinthe);
-                break;
-            case DOWN:
-                heros.salleChoisie = position.salleSuivante(Direction.SUD, this.labyrinthe);
-                break;
+        if (!super.enDeplacement) {
+            switch (keyCode) {
+                case LEFT:
+                    heros.salleChoisie = position.salleSuivante(Direction.OUEST, this.labyrinthe);
+                    break;
+                case RIGHT:
+                    heros.salleChoisie = position.salleSuivante(Direction.EST, this.labyrinthe);
+                    break;
+                case UP:
+                    heros.salleChoisie = position.salleSuivante(Direction.NORD, this.labyrinthe);
+                    break;
+                case DOWN:
+                    heros.salleChoisie = position.salleSuivante(Direction.SUD, this.labyrinthe);
+                    break;
+            }
         }
     }
 }
