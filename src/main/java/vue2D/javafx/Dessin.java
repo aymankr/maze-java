@@ -45,14 +45,14 @@ public class Dessin extends Canvas {
     }
 
     public void dessinSalles() {
-        for (ISalle s : labyrinthe) {
+        labyrinthe.forEach(s -> {
             tampon.drawImage(salleImage, s.getX()*unite, s.getY()*unite, unite, unite);
-        }
+        });
     }
     
     public void dessinSprites() {
-        for (ISprite s : sprites) {
+        sprites.forEach(s -> {
             s.dessiner(tampon);
-        }
+        });
     }
 }

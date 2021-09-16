@@ -45,17 +45,8 @@ public abstract class ASprite implements ISprite {
             posPrecedent = position;
             enDeplacement = true;
 
-            if (posPrecedent.getX() > positionChoisie.getX()) {
-                decalageX = -1;
-            } else if (posPrecedent.getX() < positionChoisie.getX()) {
-                decalageX = 1;
-            }
-
-            if (posPrecedent.getY() > positionChoisie.getY()) {
-                decalageY = -1;
-            } else if (posPrecedent.getY() < positionChoisie.getY()) {
-                decalageY = 1;
-            }
+            decalageX = positionChoisie.getX() - posPrecedent.getX();
+            decalageY = positionChoisie.getY() - posPrecedent.getY();
         }
 
         if (enDeplacement) {
@@ -63,7 +54,7 @@ public abstract class ASprite implements ISprite {
             int ajoutX = nbDecalages * decalageX;
             int ajoutY = nbDecalages * decalageY;
             g.drawImage(image, posPrecedent.getX() * unite + ajoutX, posPrecedent.getY() * unite + ajoutY, unite, unite);
-            
+
             if (posPrecedent.getX() * unite + ajoutX == positionChoisie.getX() * unite
                     && posPrecedent.getY() * unite + ajoutY == positionChoisie.getY() * unite) {
                 nbDecalages = decalageX = decalageY = 0;
@@ -76,6 +67,6 @@ public abstract class ASprite implements ISprite {
 
     @Override
     public void setCoordonnees(int xpix, int ypix) {
-        
+
     }
 }

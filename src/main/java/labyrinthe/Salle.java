@@ -5,6 +5,7 @@
  */
 package labyrinthe;
 
+import static java.lang.Math.abs;
 import java.util.Collection;
 
 /**
@@ -62,17 +63,14 @@ public class Salle implements ISalle {
 
     @Override
     public boolean estAdjacente(ISalle autre) {
-        for (Direction d : Direction.toutes()) {
-            ISalle tmp = new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
-            if (tmp.getX() == autre.getX() && tmp.getY() == autre.getY()) {
-                return true;
-            }
-        }
-        return false;
+        int ecartX = abs(x-autre.getX());
+        int ecartY = abs(y-autre.getY());
+        
+        return ecartX + ecartY <= 1;
     }
 
-    public ISalle salleSuivante(Direction d, Collection<ISalle> salles) {
-        ISalle suivante = new Salle(x + d.mvtHoriz(), y + d.mvtVertic());
+    public ISalle salleSuivante(int abs, int ord, Collection<ISalle> salles) {
+        ISalle suivante = new Salle(x + abs, y + ord);
         for (ISalle s : salles) {
             if (suivante.getX() == s.getX() && suivante.getY() == s.getY()) {
                 return s;

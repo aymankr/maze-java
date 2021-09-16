@@ -10,7 +10,6 @@ import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import labyrinthe.Direction;
 import labyrinthe.ILabyrinthe;
 import labyrinthe.ISalle;
 import labyrinthe.Salle;
@@ -54,16 +53,16 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
         if (!super.enDeplacement) {
             switch (keyCode) {
                 case LEFT:
-                    heros.salleChoisie = position.salleSuivante(Direction.OUEST, this.labyrinthe);
+                    heros.salleChoisie = position.salleSuivante(-1, 0, this.labyrinthe);
                     break;
                 case RIGHT:
-                    heros.salleChoisie = position.salleSuivante(Direction.EST, this.labyrinthe);
+                    heros.salleChoisie = position.salleSuivante(1, 0, this.labyrinthe);
                     break;
                 case UP:
-                    heros.salleChoisie = position.salleSuivante(Direction.NORD, this.labyrinthe);
+                    heros.salleChoisie = position.salleSuivante(0, -1, this.labyrinthe);
                     break;
                 case DOWN:
-                    heros.salleChoisie = position.salleSuivante(Direction.SUD, this.labyrinthe);
+                    heros.salleChoisie = position.salleSuivante(0, 1, this.labyrinthe);
                     break;
             }
         }
