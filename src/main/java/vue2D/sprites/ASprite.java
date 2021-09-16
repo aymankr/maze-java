@@ -22,15 +22,14 @@ public abstract class ASprite implements ISprite {
     IPersonnage IPerso;
     Image image;
     ILabyrinthe labyrinthe;
-    int pixCumulX;
-    int pixCumulY;
+    int nbDecalages;
     int decalageX;
     int decalageY;
     Salle posPrecedent;
     boolean enDeplacement;
 
     public ASprite(IPersonnage p, ILabyrinthe l) {
-        pixCumulX = pixCumulY = decalageX = decalageY = 0;
+        nbDecalages = decalageX = decalageY = 0;
         IPerso = p;
         labyrinthe = l;
         enDeplacement = false;
@@ -40,7 +39,7 @@ public abstract class ASprite implements ISprite {
     public void dessiner(GraphicsContext g) {
         int unite = 15;
         Salle position = (Salle) IPerso.getPosition();
-        Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe);
+        Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe.sallesAccessibles(IPerso));
 
         if (position != positionChoisie && !enDeplacement) {
             posPrecedent = position;
@@ -60,11 +59,14 @@ public abstract class ASprite implements ISprite {
         }
 
         if (enDeplacement) {
-            setCoordonnees(decalageX, decalageY);
-            g.drawImage(image, posPrecedent.getX() * unite + pixCumulX, posPrecedent.getY() * unite + pixCumulY, unite, unite);
-            if (posPrecedent.getX() * unite + pixCumulX == positionChoisie.getX() * unite
-                    && posPrecedent.getY() * unite + pixCumulY == positionChoisie.getY() * unite) {
-                pixCumulX = pixCumulY = decalageX = decalageY = 0;
+            nbDecalages++;
+            int ajoutX = nbDecalages * decalageX;
+            int ajoutY = nbDecalages * decalageY;
+            g.drawImage(image, posPrecedent.getX() * unite + ajoutX, posPrecedent.getY() * unite + ajoutY, unite, unite);
+            
+            if (posPrecedent.getX() * unite + ajoutX == positionChoisie.getX() * unite
+                    && posPrecedent.getY() * unite + ajoutY == positionChoisie.getY() * unite) {
+                nbDecalages = decalageX = decalageY = 0;
                 enDeplacement = false;
             }
         } else {
@@ -74,7 +76,6 @@ public abstract class ASprite implements ISprite {
 
     @Override
     public void setCoordonnees(int xpix, int ypix) {
-        pixCumulX += xpix;
-        pixCumulY += ypix;
+        
     }
 }

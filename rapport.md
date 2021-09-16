@@ -29,11 +29,15 @@ Difficulté de comprendre la demande du sujet sur la manière d'écrire les test
 
 ## 13/09 :
 1. Correction au niveau des déplacements, car il ne faut pas créer de nouvelles salles, mais il faut utiliser celles déjà présentes
+2. Exercices 15, 16 et 17 fait
+3. Objectif 4 terminé
 
 ## 14/09 :
-1. Essai pour effectuer des déplacements fluides
+1. Début objectif 5
+2. Essai pour effectuer des déplacements fluides (exercice 19 en cours)
 
 ## 15/09 :
 1. Continuité déplacements fluides
 
-
+## 16/09 :
+1. Déplacements fluides fini pour le héros, mais pas pour les monstres.

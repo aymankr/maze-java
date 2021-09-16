@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.concurrent.CopyOnWriteArrayList;
 import labyrinthe.ILabyrinthe;
@@ -34,7 +35,7 @@ public class Core {
         vue.add(this.heros);
 
         CopyOnWriteArrayList<ISprite> monstres = new CopyOnWriteArrayList();
-        for (int i = 0; i<=9; i++) {
+        for (int i = 0; i<=0; i++) {
             IPersonnage m = new personnages.Monstre(labyrinthe.getSortie());
             monstres.add(new MonstreSprite(m, labyrinthe));
         }
