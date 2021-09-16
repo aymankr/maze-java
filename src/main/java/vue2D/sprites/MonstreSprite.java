@@ -16,22 +16,22 @@ import personnages.IPersonnage;
  * @author aykachmar
  */
 public class MonstreSprite extends ASprite {
-    
+
     public MonstreSprite(IPersonnage p, ILabyrinthe l) {
         super(p, l);
         image = new Image("file:icons/monstre0.gif");
     }
-    
+
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
         return IPerso.faitSonChoix(sallesAccessibles);
     }
-    
+
     @Override
     public ISalle getPosition() {
         return IPerso.getPosition();
     }
-    
+
     @Override
     public void setPosition(ISalle s) {
         IPerso.setPosition(s);

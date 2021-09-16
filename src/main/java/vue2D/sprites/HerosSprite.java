@@ -22,7 +22,7 @@ import personnages.IPersonnage;
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
-    Heros heros;
+    private Heros heros;
 
     public HerosSprite(IPersonnage IPerso, ILabyrinthe l) {
         super(IPerso, l);

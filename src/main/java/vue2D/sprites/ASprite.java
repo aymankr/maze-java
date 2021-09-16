@@ -5,11 +5,9 @@
  */
 package vue2D.sprites;
 
-import static java.lang.Math.abs;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
-import labyrinthe.ISalle;
 import labyrinthe.Salle;
 import personnages.IPersonnage;
 
@@ -22,10 +20,11 @@ public abstract class ASprite implements ISprite {
     IPersonnage IPerso;
     Image image;
     ILabyrinthe labyrinthe;
-    int nbDecalages;
-    int decalageX;
-    int decalageY;
-    Salle posPrecedent;
+    private int nbDecalages;
+    private int decalageX;
+    private int decalageY;
+    private Salle posDepart;
+    private Salle posChoisie;
     boolean enDeplacement;
 
     public ASprite(IPersonnage p, ILabyrinthe l) {
@@ -41,22 +40,23 @@ public abstract class ASprite implements ISprite {
         Salle position = (Salle) IPerso.getPosition();
         Salle positionChoisie = (Salle) IPerso.faitSonChoix(labyrinthe.sallesAccessibles(IPerso));
 
-        if (position != positionChoisie && !enDeplacement) {
-            posPrecedent = position;
+        if (!enDeplacement) {
+            posDepart = position;
+            posChoisie = positionChoisie;
             enDeplacement = true;
 
-            decalageX = positionChoisie.getX() - posPrecedent.getX();
-            decalageY = positionChoisie.getY() - posPrecedent.getY();
+            decalageX = positionChoisie.getX() - posDepart.getX();
+            decalageY = positionChoisie.getY() - posDepart.getY();
         }
 
         if (enDeplacement) {
             nbDecalages++;
             int ajoutX = nbDecalages * decalageX;
             int ajoutY = nbDecalages * decalageY;
-            g.drawImage(image, posPrecedent.getX() * unite + ajoutX, posPrecedent.getY() * unite + ajoutY, unite, unite);
+            g.drawImage(image, posDepart.getX() * unite + ajoutX, posDepart.getY() * unite + ajoutY, unite, unite);
 
-            if (posPrecedent.getX() * unite + ajoutX == positionChoisie.getX() * unite
-                    && posPrecedent.getY() * unite + ajoutY == positionChoisie.getY() * unite) {
+            if (posDepart.getX() * unite + ajoutX == posChoisie.getX() * unite
+                    && posDepart.getY() * unite + ajoutY == posChoisie.getY() * unite) {
                 nbDecalages = decalageX = decalageY = 0;
                 enDeplacement = false;
             }
