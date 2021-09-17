@@ -49,22 +49,20 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
     public void handle(KeyEvent e) {
         KeyCode keyCode = e.getCode();
         Salle position = (Salle) IPerso.getPosition();
-
-        if (!super.enDeplacement) {
-            switch (keyCode) {
-                case LEFT:
-                    heros.salleChoisie = position.salleSuivante(-1, 0, this.labyrinthe);
-                    break;
-                case RIGHT:
-                    heros.salleChoisie = position.salleSuivante(1, 0, this.labyrinthe);
-                    break;
-                case UP:
-                    heros.salleChoisie = position.salleSuivante(0, -1, this.labyrinthe);
-                    break;
-                case DOWN:
-                    heros.salleChoisie = position.salleSuivante(0, 1, this.labyrinthe);
-                    break;
-            }
+        switch (keyCode) {
+            case LEFT:
+                heros.salleChoisie = position.salleSuivante(-1, 0, this.labyrinthe);
+                break;
+            case RIGHT:
+                heros.salleChoisie = position.salleSuivante(1, 0, this.labyrinthe);
+                break;
+            case UP:
+                heros.salleChoisie = position.salleSuivante(0, -1, this.labyrinthe);
+                break;
+            case DOWN:
+                heros.salleChoisie = position.salleSuivante(0, 1, this.labyrinthe);
+                break;
         }
+
     }
 }

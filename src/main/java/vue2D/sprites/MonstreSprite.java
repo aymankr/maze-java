@@ -34,6 +34,6 @@ public class MonstreSprite extends ASprite {
 
     @Override
     public void setPosition(ISalle s) {
-        IPerso.setPosition(s);
+            IPerso.setPosition(s);
     }
 }
