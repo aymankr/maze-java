@@ -5,10 +5,8 @@
  */
 package vue2D.sprites;
 
-import java.util.Collection;
 import javafx.scene.image.Image;
 import labyrinthe.ILabyrinthe;
-import labyrinthe.ISalle;
 import personnages.IPersonnage;
 
 /**
@@ -20,20 +18,5 @@ public class MonstreSprite extends ASprite {
     public MonstreSprite(IPersonnage p, ILabyrinthe l) {
         super(p, l);
         image = new Image("file:icons/monstre0.gif");
-    }
-
-    @Override
-    public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
-        return IPerso.faitSonChoix(sallesAccessibles);
-    }
-
-    @Override
-    public ISalle getPosition() {
-        return IPerso.getPosition();
-    }
-
-    @Override
-    public void setPosition(ISalle s) {
-            IPerso.setPosition(s);
     }
 }

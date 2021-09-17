@@ -31,24 +31,10 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
     }
 
     @Override
-    public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
-        return IPerso.faitSonChoix(sallesAccessibles);
-    }
-
-    @Override
-    public ISalle getPosition() {
-        return IPerso.getPosition();
-    }
-
-    @Override
-    public void setPosition(ISalle s) {
-        IPerso.setPosition(s);
-    }
-
-    @Override
     public void handle(KeyEvent e) {
         KeyCode keyCode = e.getCode();
         Salle position = (Salle) IPerso.getPosition();
+
         switch (keyCode) {
             case LEFT:
                 heros.salleChoisie = position.salleSuivante(-1, 0, this.labyrinthe);

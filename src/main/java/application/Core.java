@@ -35,7 +35,7 @@ public class Core {
         vue.add(this.heros);
 
         CopyOnWriteArrayList<ISprite> monstres = new CopyOnWriteArrayList();
-        for (int i = 0; i<=0; i++) {
+        for (int i = 0; i<=10; i++) {
             IPersonnage m = new personnages.Monstre(labyrinthe.getSortie());
             monstres.add(new MonstreSprite(m, labyrinthe));
         }

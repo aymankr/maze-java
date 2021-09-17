@@ -22,15 +22,14 @@ public abstract class ASprite implements ISprite {
     IPersonnage IPerso;
     Image image;
     ILabyrinthe labyrinthe;
+    private final int unite = 15;
     boolean enDeplacement;
-    private int nbDecalages;
-    private int decalageX;
-    private int decalageY;
-    private Salle posDepart;
+    private int x;
+    private int y;
+    private Salle posInitiale;
     private Salle posChoisie;
 
     public ASprite(IPersonnage p, ILabyrinthe l) {
-        nbDecalages = decalageX = decalageY = 0;
         IPerso = p;
         labyrinthe = l;
         enDeplacement = false;
@@ -38,53 +37,47 @@ public abstract class ASprite implements ISprite {
 
     @Override
     public void dessiner(GraphicsContext g) {
-        int unite = 15;
 
-        if (!enDeplacement) {
-            enDeplacement = true;
-            posDepart = (Salle) IPerso.getPosition();
-           
-
-            decalageX = posChoisie.getX() - posDepart.getX();
-            decalageY = posChoisie.getY() - posDepart.getY();
-        }
-
+        int ajoutX = 0;
+        int ajoutY = 0;
         if (enDeplacement) {
-            nbDecalages++;
-            int ajoutX = nbDecalages * decalageX;
-            int ajoutY = nbDecalages * decalageY;
-            g.drawImage(image, posDepart.getX() * unite + ajoutX, posDepart.getY() * unite + ajoutY, unite, unite);
-            
-            System.out.println("pos graphique : " + (posDepart.getX() * unite + ajoutX) + ", " + (posDepart.getY() * unite + ajoutY));
-            System.out.println("pos destination : " + (posChoisie.getX() * unite) + ", " + (posChoisie.getY() * unite));
+            ajoutX = posChoisie.getX() - posInitiale.getX();
+            ajoutY = posChoisie.getY() - posInitiale.getY();
 
-            if (posDepart.getX() * unite + ajoutX == posChoisie.getX() * unite
-                    && posDepart.getY() * unite + ajoutY == posChoisie.getY() * unite) {
-                nbDecalages = decalageX = decalageY = 0;
-                enDeplacement = false;
-            }
-        } else {
-            g.drawImage(image, posDepart.getX() * unite, posDepart.getY() * unite, unite, unite);
+            setCoordonnees(ajoutX, ajoutY);
+            enDeplacement = !(x == posChoisie.getX() * unite && y == posChoisie.getY() * unite);
         }
+
+        g.drawImage(image, x + ajoutX, y + ajoutY, unite, unite);
     }
-    
+
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
         if (!enDeplacement) {
-            ISalle s  = IPerso.faitSonChoix(sallesAccessibles);
+            ISalle s = IPerso.faitSonChoix(sallesAccessibles);
             enDeplacement = (s != this.getPosition());
+            posInitiale = this.getPosition();
+            x = posInitiale.getX()*unite;
+            y = posInitiale.getY()*unite;
+            posChoisie = (Salle) s;
             return s;
         }
         return IPerso.getPosition();
     }
-    
+
     @Override
-    public void setPosition(ISalle autre) {
-        posChoisie = (Salle) IPerso.getPosition();
+    public void setPosition(ISalle s) {
+        IPerso.setPosition(s);
     }
-    
+
+    @Override
+    public Salle getPosition() {
+        return (Salle) IPerso.getPosition();
+    }
+
     @Override
     public void setCoordonnees(int xpix, int ypix) {
-        x +=
+        x += xpix;
+        y += ypix;
     }
 }
