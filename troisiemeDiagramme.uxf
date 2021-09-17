@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>455</y>
+      <w>15</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>450</x>
+      <y>495</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>0..n</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>470</x>
+      <y>495</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>sallesAccessibles
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>615</x>
+      <y>250</y>
+      <w>170</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>320.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>485</x>
+      <y>450</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>300.0;80.0;300.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>615</x>
+      <y>480</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>285</y>
+      <w>110</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;230.0;200.0;230.0;200.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>605</x>
+      <y>270</y>
+      <w>15</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>395</y>
+      <w>65</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;190.0;110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>600</x>
+      <y>275</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>725</x>
+      <y>480</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>270</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>320.0;10.0;320.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>790</x>
+      <y>280</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>485</x>
+      <y>405</y>
+      <w>75</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>495</x>
+      <y>410</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>350</x>
+      <y>470</y>
+      <w>495</w>
+      <h>235</h>
+    </coordinates>
+    <panel_attributes>package.labyrinthe
+--
+bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>540</x>
+      <y>320</y>
+      <w>345</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>package.application
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>110</x>
+      <y>315</y>
+      <w>385</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>package.personnages
+--
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>255</x>
+      <y>35</y>
+      <w>735</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>package.vue2D
+--
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>725</x>
+      <y>440</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>labyrinthe
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>500</x>
+      <y>400</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>personnage
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>595</y>
+      <w>185</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>labyrinthe::Labyrinthe
+--
+#entree: ISalle
+#sortie: ISalle
+-largeur: int
+-hauteur: int
+--
++creerLabyrinthe(String file): void
++sallesAccessibles(IPersonnage bob): Collection&lt;ISalle&gt;
++getEntree(): ISalle
++getSortie(): ISalle
++chemin(ISalle u, ISalle v): Collection&lt;ISalle&gt;
++getLargeur(): int
++getHauteur(): int
+--
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>625</x>
+      <y>490</y>
+      <w>190</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+labyrinthe::ILabyrinthe
+--
+--
++creerLabyrinthe(String file): void
++sallesAccessibles(IPersonnage heros): Collection&lt;ISalle&gt;
++getEntree(): ISalle
++getSortie(): ISalle
++chemin(ISalle u, ISalle v): Collection&lt;ISalle&gt;
++getLargeur(): int
++getHauteur(): int
+--
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>510</y>
+      <w>125</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+labyrinthe::ISalle
+--
+--
++getX(): int
++getY(): int
++estAdjacente(ISalle autre): boolean
+--
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>555</x>
+      <y>340</y>
+      <w>115</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>application::Core
+--
+~heros: ISprite
+~labyrinthe: ILabyrinthe
+--
+#initLabyrinthe(): void
+#initSprites(IVue vue): void
+#jeu(IVue vue): void
+-chargementLaby(String fic): void
+#temporisation(int nb): void
+--
+bg=black
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>305</x>
+      <y>395</y>
+      <w>185</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+personnages::IPersonnage
+--
+--
++faitSonChoix(Collection&lt;ISalle&gt; sallesAccessibles): ISalle
++getPosition(): ISalle
++setPosition(ISalle s): void
+--
+bg=yellow
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>775</x>
+      <y>230</y>
+      <w>60</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+vue2D::IVue
+--
+--
++dessiner(): void
+--
+bg=green
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>275</x>
+      <y>50</y>
+      <w>380</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>package.vue2D.sprites
+--
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>485</x>
+      <y>220</y>
+      <w>135</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+vue2D.sprites::ISprite
+--
+--
++dessiner(GraphicsContext g): void
++setCoordonnees(int xpix, int ypix): void
+--
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>355</y>
+      <w>85</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>application::MainJavaFX
+--
+-core: Core
+--
++start(Stage stage): void
++main(String[] args): void
+--
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>860</x>
+      <y>555</y>
+      <w>125</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>package.outils
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>865</x>
+      <y>590</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>outils::Fichier
+--
+~sc = null: Scanner
+--
++Fichier(String nomFichier): ctor
++lireNombre(): int
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>665</x>
+      <y>105</y>
+      <w>320</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>package.vue2D.javafx
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>135</y>
+      <w>175</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>vue2D.javafx::Dessin
+--
+-sprites: Collection&lt;ISprite&gt;
+-labyrinthe: ILabyrinthe
+-unite = 15: int
+-tampon: GraphicsContext
+-solImage: Image
+--
++Dessin(ILabyrinthe labyrinthe, Collection&lt;ISprite&gt; sprites): ctor
++chargementImages(): void
++dessinFond(): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>860</x>
+      <y>145</y>
+      <w>115</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>vue2D.javafx::Vue
+--
+~dessin: Dessin
+~labyrinthe: ILabyrinthe
++scene: Scene
+--
++Vue(ILabyrinthe labyrinthe): ctor
++dessiner(): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>565</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>580</y>
+      <w>50</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>640</y>
+      <w>330</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>640.0;10.0;640.0;190.0;10.0;190.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>730</x>
+      <y>720</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>510</y>
+      <w>45</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>70.0;90.0;10.0;90.0;10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>355</x>
+      <y>525</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>autre</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>370</x>
+      <y>555</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>305</x>
+      <y>450</y>
+      <w>110</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;330.0;200.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>310</x>
+      <y>465</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>375</y>
+      <w>110</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>670</x>
+      <y>380</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>910</x>
+      <y>375</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>845</x>
+      <y>210</y>
+      <w>125</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>230.0;10.0;230.0;320.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>280</y>
+      <w>50</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>/vue2D::AVue/
+--
+--
+--
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>615</x>
+      <y>265</y>
+      <w>130</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;10.0;240.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>270</y>
+      <w>30</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>635</x>
+      <y>205</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1..n</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>635</x>
+      <y>225</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>animations
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>615</x>
+      <y>210</y>
+      <w>80</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;140.0;30.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>210</y>
+      <w>100</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;610.0;180.0;610.0;180.0;240.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>820</x>
+      <y>500</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>775</x>
+      <y>210</y>
+      <w>130</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;240.0;190.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>805</x>
+      <y>210</y>
+      <w>115</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;210.0;210.0;210.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>825</x>
+      <y>120</y>
+      <w>90</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0;160.0;10.0;160.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>820</x>
+      <y>125</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>215</y>
+      <w>145</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;610.0;270.0;610.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>820</x>
+      <y>525</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>395</y>
+      <w>100</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>/personnages::APersonnage/
+--
++salleChoisie: ISalle
+~position: ISalle
+--
++getPosition(): ISalle
++setPosition(ISalle s): void
+--
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>305</x>
+      <y>345</y>
+      <w>185</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>personnages::Heros
+--
+--
++Heros(ISalle entree): ctor
++faitSonChoix(Collection&lt;ISalle&gt; sallesAccessibles): ISalle
+--
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>115</x>
+      <y>345</y>
+      <w>185</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>personnages::Monstre
+--
+--
++Monstre(ISalle position): ctor
++faitSonChoix(Collection&lt;ISalle&gt; sallesAccessibles): ISalle
+--
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>285</x>
+      <y>70</y>
+      <w>195</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>/vue2D.sprites::ASprite/
+--
+~IPerso: IPersonnage
+~image: Image
+~labyrinthe: ILabyrinthe
+-unite = 15: int
+~enDeplacement: boolean
+-x: int
+-y: int
+-posInitiale: Salle
+-posChoisie: Salle
+--
++ASprite(IPersonnage p, ILabyrinthe l): ctor
++dessiner(GraphicsContext g): void
++faitSonChoix(Collection&lt;ISalle&gt; sallesAccessibles): ISalle
++setPosition(ISalle s): void
++getPosition(): Salle
++setCoordonnees(int xpix, int ypix): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>285</x>
+      <y>220</y>
+      <w>175</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>vue2D.sprites::HerosSprite
+--
+-heros: Heros
+--
++HerosSprite(IPersonnage IPerso, ILabyrinthe l): ctor
++handle(KeyEvent e): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>485</x>
+      <y>170</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>vue2D.sprites::MonstreSprite
+--
+--
++MonstreSprite(IPersonnage p, ILabyrinthe l): ctor
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>635</x>
+      <y>595</y>
+      <w>205</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>labyrinthe::Salle
+--
+-x: int
+-y: int
+--
++Salle(int X, int Y): ctor
++getX(): int
++hashCode(): int
++equals(Object obj): boolean
++getY(): int
++estAdjacente(ISalle autre): boolean
++salleSuivante(int abs, int ord, Collection&lt;ISalle&gt; salles): ISalle
+--
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>305</x>
+      <y>700</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>95</x>
+      <y>180</y>
+      <w>575</w>
+      <h>545</h>
+    </coordinates>
+    <panel_attributes>lt=..&gt;</panel_attributes>
+    <additional_attributes>380.0;10.0;20.0;10.0;10.0;1070.0;1130.0;1070.0;1130.0;1040.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>270</y>
+      <w>15</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>380</x>
+      <y>330</y>
+      <w>50</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>245</x>
+      <y>375</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;20.0;260.0;20.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>375</y>
+      <w>15</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>255</x>
+      <y>425</y>
+      <w>60</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>535</y>
+      <w>130</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>475</x>
+      <y>125</y>
+      <w>35</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>200</y>
+      <w>15</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>

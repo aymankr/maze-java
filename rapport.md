@@ -38,6 +38,21 @@ Difficulté de comprendre la demande du sujet sur la manière d'écrire les test
 
 ## 15/09 :
 1. Continuité déplacements fluides
+2. Il est parfois difficile de critiquer son propre code et de trouver, corriger les erreurs pour régler le problème.
 
 ## 16/09 :
 1. Déplacements fluides fini pour le héros, mais pas pour les monstres.
+2. Gérer la prise en compte du déplacement déjà en cours ou non
+
+## 17/09 :
+1. Déplacements fluides enfin terminés pour le héros et les monstres.
+2. Exercice 19 terminé. <br/>
+Les difficultés rencontrées pour faire les déplacements fluides était la manière de procéder pour stocker la position de départ et la manière d'ajouter à chaque fois un pixel, il aura fallu mettre en place plusieurs attributs pour ceci, il a aussi fallu prendre en compte si le personnage était déjà en cours de déplacement.<br/>
+
+# Difficultés de manière globale :
+1. Se familiariser au code dès le départ
+2. Conceptualiser de nombreusees classes contenues dans plusieurs packages
+3. Comprendre précisément les exigences demandées par le sujet
+4. Manipuler les objets et utiliser le polymorphisme de manière pertinente et efficace sans se compliquer
+
+
